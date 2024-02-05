@@ -147,7 +147,7 @@ feed.addEventListener('click', (e) => {
 				const comment = document.getElementById('comment');
 				if (comment) {
 					const postDiv = document.createElement('div');
-					postDiv.setAttribute('class', 'post');
+					postDiv.setAttribute('class', 'card');
 					postDiv.innerHTML = `
    <img
     src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/031/original/profile_image.png?1706888739"
@@ -236,7 +236,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	comments.forEach((comment) => {
 		const postDiv = document.createElement('div');
-		postDiv.setAttribute('class', 'post');
+		postDiv.setAttribute('class', 'card');
 		postDiv.innerHTML = `
    <img
  src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/031/original/profile_image.png?1706888739"
@@ -267,6 +267,7 @@ feed.addEventListener('click', (e) => {
 		console.log(id);
 
 		posts = posts.filter((post) => post.id != id);
+		comments = comments.filter((comment) => comment.postId != id);
 		saveDataToLocalStorage();
 		target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
 	}
