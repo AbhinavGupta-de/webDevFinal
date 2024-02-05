@@ -84,6 +84,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 10px;
 }
 
 .feed-text {
@@ -98,6 +99,10 @@ header {
 	width: 464px;
 	height: 196px;
 	gap: 10px;
+}
+
+.card-details {
+	width: 100%;
 }
 
 .card-container {
@@ -124,7 +129,7 @@ header {
 
 .user-details {
 	display: flex;
-	gap: 75px;
+	justify-content: space-between;
 	width: 100%;
 	align-items: center;
 }
